@@ -1,0 +1,136 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: "Source Sans Pro", sans-serif; }
+  body .material-icons {
+    color: #ffc107; }
+  body #loading {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    text-align: center;
+    padding-top: 50vh;
+    display: none; }
+  body #disney {
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    top: calc(100vh - 50px); }
+    body #disney img {
+      height: 50px; }
+  body #volume {
+    position: absolute;
+    bottom: 15px;
+    left: calc(100vw - 30px);
+    display: none; }
+  body #game {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh; }
+    body #game #screen-1 {
+      display: none;
+      color: #0000ff;
+      font-weight: 900;
+      font-size: 32px;
+      text-align: center;
+      height: 100vh;
+      width: 100vw;
+      padding-top: 45vh;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: rgba(0, 0, 0, 0.6); }
+    body #game #screen-2 {
+      display: none;
+      text-align: center;
+      margin: 0px auto; }
+      body #game #screen-2 #slogan {
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 32px;
+        text-align: center;
+        padding-top: 34vh; }
+      body #game #screen-2 #story {
+        width: 500px;
+        margin: 0px auto;
+        position: relative;
+        bottom: -430px;
+        font-size: 32px;
+        text-align: justify; }
+    body #game #screen-3 {
+      display: none; }
+      body #game #screen-3 #small-logo {
+        height: 100px;
+        margin: 8px auto;
+        display: block; }
+      body #game #screen-3 #question {
+        max-width: 768px;
+        margin: 8px auto;
+        font-size: 32px;
+        font-weight: 900;
+        text-align: justify; }
+      body #game #screen-3 .answers {
+        margin: 8px auto;
+        padding: 0px 8px;
+        max-width: 768px; }
+        body #game #screen-3 .answers .ans {
+          color: #ffffff;
+          margin-bottom: 8px;
+          font-size: 24px;
+          padding: 8px;
+          border: 1px solid #ffffff;
+          border-radius: 4px;
+          cursor: pointer; }
+        body #game #screen-3 .answers .ans:hover {
+          border-color: #ffc107;
+          color: #ffc107; }
+      body #game #screen-3 #points-container {
+        padding: 8px;
+        font-size: 32px;
+        font-weight: 900;
+        margin: 8px auto;
+        max-width: 768px; }
+    body #game #screen-4 {
+      display: none;
+      background-image: url("images/spaceship.png");
+      background-repeat: no-repeat;
+      background-size: 25%;
+      background-position: 100% 0%; }
+      body #game #screen-4 #small-logo-4 {
+        height: 100px;
+        margin: 8px auto;
+        display: block; }
+      body #game #screen-4 #points-container-4 {
+        padding: 8px;
+        font-size: 32px;
+        font-weight: 900;
+        margin: 8px auto;
+        max-width: 768px; }
+      body #game #screen-4 #remark {
+        font-size: 32px;
+        font-weight: 900;
+        margin: 8px auto;
+        max-width: 768px; }
+    body #game .screens {
+      width: 100vw;
+      height: 100vh; }
+  body .slider.slider-vertical .slider-track {
+    width: 2px;
+    left: 50%;
+    background-image: none;
+    background-color: #ffc107; }
+  body .slider-handle {
+    background-image: none;
+    background-color: #ffc107; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>The Greatest Fan of Star Wars - Cal Tech Hub</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">        
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="loading">Loading ...</div>
+        <div id="game">
+            <div class="screens" id="screen-1">
+                A long time ago in a galaxy far,
+                <br>
+                far away...
+            </div>
+            <div class="screens" id="screen-2">
+                <div id="slogan" class="text-warning">The Greatest Fan of</div>
+                <img id="logo" src="images/star-wars.png">
+                <div id="story" class="text-warning">
+                    Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.                    
+                </div>
+            </div>
+            <div class="screens" id="screen-3">
+                <img id="small-logo" src="images/star-wars.png">
+                <div id="question" class="text-warning text-center"></div>
+                <div class="answers">
+                    <div id="answer-a" class="ans"></div>
+                    <div id="answer-b" class="ans"></div>
+                </div>
+                <div id="points-container" class="text-warning text-center">
+                    Score: <span id="points"></span>
+                </div>
+            </div>
+            <div class="screens" id="screen-4">
+                <img id="small-logo-4" src="images/star-wars.png">
+                <div class="text-center text-warning" id="points-container-4">Score: <span id="points-4">12/15</span></div>
+                <div id="remark" class="text-center text-warning"></div>
+                <div id="share"></div>
+            </div>            
+        </div>
+        <div id="volume">
+            <input id="vol" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="100" data-slider-orientation="vertical"/>
+            <i class="material-icons">&#xE050;</i>
+        </div>
+        <div id="disney">
+            <img src="images/disney.png">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+        <script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
+        <script src="bundle.js"></script>
+    </body>
+</html>
