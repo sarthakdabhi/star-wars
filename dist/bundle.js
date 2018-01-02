@@ -65,6 +65,7 @@ var App = function () {
             "ans": "b"
         }];
         $('.screens').hide();
+        $('#story').css({ top: window.screen.height + "px" });
         this.loadSound();
         this.quesCount = 0;
     }
@@ -73,13 +74,13 @@ var App = function () {
         key: "loadSound",
         value: function loadSound() {
             var that = this;
-            createjs.Sound.alternateExtensions = ["ogg"];
+            createjs.Sound.alternateExtensions = ["wav"];
             createjs.Sound.registerPlugins([createjs.WebAudioPlugin]);
             createjs.Sound.on("fileload", function () {
                 // $('#loading').hide();
                 // that.screen1();
             }, this);
-            createjs.Sound.registerSound("sounds/star-wars.wav", this.soundID);
+            createjs.Sound.registerSound("sounds/star-wars.ogg", this.soundID);
             $('#loading').hide();
             that.screen1();
         }
@@ -114,8 +115,12 @@ var App = function () {
                             'width': '1px'
                         }, 5000, function () {
                             setTimeout(function () {
+                                var top = '-' + window.screen.height;
+                                if (window.screen.height < storyEl.height()) {
+                                    top = '-' + (storyEl.height() + 20);
+                                }
                                 storyEl.animate({
-                                    'top': '-110vh'
+                                    'top': top
                                 }, 30000, function () {
                                     that.quesCount = 0;
                                     $('.screens').hide();
