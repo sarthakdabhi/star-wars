@@ -76,10 +76,12 @@ var App = function () {
             createjs.Sound.alternateExtensions = ["ogg"];
             createjs.Sound.registerPlugins([createjs.WebAudioPlugin]);
             createjs.Sound.on("fileload", function () {
-                $('#loading').hide();
-                that.screen1();
+                // $('#loading').hide();
+                // that.screen1();
             }, this);
             createjs.Sound.registerSound("sounds/star-wars.wav", this.soundID);
+            $('#loading').hide();
+            that.screen1();
         }
     }, {
         key: "screen1",
@@ -90,6 +92,11 @@ var App = function () {
                 $('#screen-1').fadeOut(1000, function () {
                     $('.screens').hide();
                     $('#volume').show();
+                    var screen1El = $('#screen-2');
+                    var logoEl = $('#logo');
+                    var sloganEl = $('#slogan');
+                    var storyEl = $('#story');
+                    screen1El.show();
                     var soundProps = new createjs.PlayPropsConfig().set({ loop: -1 });
                     var audio = createjs.Sound.play(that.soundID, soundProps);
                     var volEl = $('#vol').slider({ reversed: true }).on('slide', function (e) {
@@ -97,36 +104,35 @@ var App = function () {
                     }).on('change', function (e) {
                         audio.volume = volEl.getValue() / 100;
                     }).data('slider');
-                    var screen1El = $('#screen-2');
-                    var logoEl = $('#logo');
-                    var sloganEl = $('#slogan');
-                    var storyEl = $('#story');
-                    screen1El.show();
                     setTimeout(function () {
                         sloganEl.animate({
                             'font-size': '1px'
-                        }, 5000);
+                        }, 5000, function () {
+                            sloganEl.hide();
+                        });
                         logoEl.animate({
                             'width': '1px'
                         }, 5000, function () {
-                            storyEl.animate({
-                                'bottom': '600px'
-                            }, 5000, function () {
-                                that.quesCount = 0;
-                                $('.screens').hide();
-                                var screen2El = $('#screen-3');
-                                screen2El.show();
-                                $('#points').html(String(that.points) + "/" + String(that.queans.length));
-                                $('#answer-a').off('click');
-                                $('#answer-a').on('click', function () {
-                                    that.checkAns('a');
+                            setTimeout(function () {
+                                storyEl.animate({
+                                    'top': '-110vh'
+                                }, 30000, function () {
+                                    that.quesCount = 0;
+                                    $('.screens').hide();
+                                    var screen2El = $('#screen-3');
+                                    screen2El.show();
+                                    $('#points').html(String(that.points) + "/" + String(that.queans.length));
+                                    $('#answer-a').off('click');
+                                    $('#answer-a').on('click', function () {
+                                        that.checkAns('a');
+                                    });
+                                    $('#answer-b').off('click');
+                                    $('#answer-b').on('click', function () {
+                                        that.checkAns('b');
+                                    });
+                                    that.newQuestion();
                                 });
-                                $('#answer-b').off('click');
-                                $('#answer-b').on('click', function () {
-                                    that.checkAns('b');
-                                });
-                                that.newQuestion();
-                            });
+                            }, 1000);
                         });
                     }, 5000);
                 });
@@ -151,7 +157,6 @@ var App = function () {
                 $('#points').html(String(that.points) + "/" + String(that.queans.length));
             }
             that.quesCount++;
-            console.log(that.quesCount);
             if (that.quesCount < that.queans.length) {
                 that.newQuestion();
             } else {
