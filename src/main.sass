@@ -13,6 +13,7 @@ body
         color: #ffc107
 
     #loading
+        overflow: hidden
         position: absolute
         top: 0px
         left: 0px
@@ -35,10 +36,12 @@ body
     #volume
         position: absolute
         bottom: 15px
-        left: calc(100vw - 30px)
+        left: calc(100vw - 60px)
         display: none
+        width: 30px
 
     #game
+        overflow: hidden
         position: absolute
         top: 0px
         left: 0px   
@@ -71,7 +74,10 @@ body
                 padding-top: 34vh
             
             #story
-                width: 500px
+                width: calc(100vw - 30px)
+                padding-left: 15px
+                padding-right: 15px
+                max-width: 500px
                 margin: 0px auto
                 position: relative
                 bottom: -430px
@@ -141,9 +147,13 @@ body
                 font-size: 32px
                 font-weight: 900
                 margin: 8px auto
-                max-width: 768px                
+                max-width: 768px
+
+            #share
+                margin: 15px 0px              
 
         .screens
+            overflow: hidden
             width: 100vw
             height: 100vh
     

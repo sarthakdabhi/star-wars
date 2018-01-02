@@ -11,6 +11,7 @@ body {
   body .material-icons {
     color: #ffc107; }
   body #loading {
+    overflow: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -30,9 +31,11 @@ body {
   body #volume {
     position: absolute;
     bottom: 15px;
-    left: calc(100vw - 30px);
-    display: none; }
+    left: calc(100vw - 60px);
+    display: none;
+    width: 30px; }
   body #game {
+    overflow: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -61,7 +64,10 @@ body {
         text-align: center;
         padding-top: 34vh; }
       body #game #screen-2 #story {
-        width: 500px;
+        width: calc(100vw - 30px);
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 500px;
         margin: 0px auto;
         position: relative;
         bottom: -430px;
@@ -121,7 +127,10 @@ body {
         font-weight: 900;
         margin: 8px auto;
         max-width: 768px; }
+      body #game #screen-4 #share {
+        margin: 15px 0px; }
     body #game .screens {
+      overflow: hidden;
       width: 100vw;
       height: 100vh; }
   body .slider.slider-vertical .slider-track {
