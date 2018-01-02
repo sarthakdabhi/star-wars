@@ -76,6 +76,7 @@ var App = function () {
             createjs.Sound.alternateExtensions = ["ogg"];
             createjs.Sound.registerPlugins([createjs.WebAudioPlugin]);
             createjs.Sound.on("fileload", function () {
+                $('#loading').hide();
                 that.screen1();
             }, this);
             createjs.Sound.registerSound("sounds/star-wars.wav", this.soundID);
