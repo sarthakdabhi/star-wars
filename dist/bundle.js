@@ -113,19 +113,19 @@ var App = function () {
                                 'bottom': '600px'
                             }, 5000, function () {
                                 that.quesCount = 0;
-                                // $('.screens').hide();
-                                // const screen2El = $('#screen-3');
-                                // screen2El.show();
-                                // $('#points').html(String(that.points) + "/" + String(that.queans.length));
-                                // $('#answer-a').off('click');
-                                // $('#answer-a').on('click', function() {
-                                //     that.checkAns('a');
-                                // });
-                                // $('#answer-b').off('click');
-                                // $('#answer-b').on('click', function() {
-                                //     that.checkAns('b');
-                                // });
-                                // that.newQuestion();
+                                $('.screens').hide();
+                                var screen2El = $('#screen-3');
+                                screen2El.show();
+                                $('#points').html(String(that.points) + "/" + String(that.queans.length));
+                                $('#answer-a').off('click');
+                                $('#answer-a').on('click', function () {
+                                    that.checkAns('a');
+                                });
+                                $('#answer-b').off('click');
+                                $('#answer-b').on('click', function () {
+                                    that.checkAns('b');
+                                });
+                                that.newQuestion();
                             });
                         });
                     }, 5000);
