@@ -12,6 +12,7 @@
         <meta property="og:description"   content="Are you the greatest fan of Star Wars? Prove it! Share it! May the force be with you!" />
         <meta property="og:image"         content="https://sarthakdabhi.github.io/star-wars/dist/images/star-wars-theme.jpg" /> 
 
+        <link rel="shortcut icon" href="https://sarthakdabhi.github.io/star-wars/dist/images/favicon.ico">        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css" rel="stylesheet">
@@ -33,7 +34,6 @@
                     <p>It is a period of civil war. All individuals from the universe are claiming to be the greatest fan of Star Wars. Even intraterrestrial lives are also trying to access this game and share in the social media websites of the universe Facebook, Twitter, and so on.</p>
                     <p>During this championship, people of Earth managed to access this game. Complete the challenge, claim the title of the greatest fan of Star Wars, and share it!</p>
                     <p>May The Force Be With You!</p>
-                    
                 </div>
             </div>
             <div class="screens" id="screen-3">
@@ -51,7 +51,9 @@
                 <img id="small-logo-4" src="images/star-wars.png">
                 <div class="text-center text-warning" id="points-container-4">Score: <span id="points-4">12/15</span></div>
                 <div id="remark" class="text-center text-warning"></div>
-                <div id="share"></div>
+                <div id="share">
+                    <div class="fb-share-button" data-href="https://sarthakdabhi.github.io/star-wars/dist/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsarthakdabhi.github.io%2Fstar-wars%2Fdist%2F&amp;src=sdkpreparse">Share</a></div>
+                </div>
                 <button type="button" class="btn btn-outline-warning" onclick="window.location.reload();">Replay</button>                
             </div>            
         </div>
@@ -66,5 +68,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
         <script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
         <script src="bundle.js"></script>
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=202690873628054';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>        
     </body>
 </html>
